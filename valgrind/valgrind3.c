@@ -5,18 +5,18 @@
 
 int main()
 {
-	char *p;
-	p = (char *) malloc(20);
+	char *p;						//creo il puntatore 
+	p = (char *) malloc(20);        //gli assegno un malloc di 20
 
-	char *s = p;
-	for(int n = 0; n < 20; n++) {
+	char *s = p;					//creo il puntatore s che punta all'indirizzo del puntatore p
+	for(int n = 0; n < 20; n++) {   //inserisco 0 in ogni spazio di p
 		*s = '\0';
 		s++;
-	}
-
-	for(int n = 0; n < 30; n++) {
+	}								//il puntatore è arrivato alla fine 
+	s = p;							//sistemo il puntatore all'inizio
+	for(int n = 0; n < 20; n++) {
 		*s = 'A';
 		s++;
 	}
-
+	free(p);						//libero la memoria dinamicamente
 }
