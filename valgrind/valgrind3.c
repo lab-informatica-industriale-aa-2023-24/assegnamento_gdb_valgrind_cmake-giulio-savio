@@ -13,10 +13,10 @@ int main()
 		*s = '\0';
 		s++;
 	}								//il puntatore è arrivato alla fine 
-
-	for(int n = 0; n < 30; n++) {
+	s = p;							//sistemo il puntatore all'inizio
+	for(int n = 0; n < 20; n++) {
 		*s = 'A';
 		s++;
 	}
-	free(p);
+	free(p);						//libero la memoria dinamicamente
 }
