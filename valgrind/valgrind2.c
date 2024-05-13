@@ -16,5 +16,6 @@ int main()
 	free(p);
 
 	p = (char *) malloc(16);
+	free(p);
 	return 0;
 }
